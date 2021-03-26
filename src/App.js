@@ -104,7 +104,17 @@ function App() {
         setNumeroInicial(" ");
       }
     }
-    
+
+    else if(op === "="){
+      setFlag(true);
+      if(numeroInicial === 0){
+        setNumeroInicial(" ");
+      } else {
+        setValorActual(" ");
+        setNumeroInicial(" ");
+      }
+    }
+
   }
 
   function handleClickFlecha(tecla) {
