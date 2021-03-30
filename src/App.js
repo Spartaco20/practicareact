@@ -19,7 +19,7 @@ const useStyles = makeStyles((theme) => ({
     color: theme.palette.text.secondary,
   },
   altura: {
-    paddingTop: 80,
+    paddingTop: 180,
   }
 }));
 
@@ -28,15 +28,18 @@ function App() {
   const [numeroInicial, setNumeroInicial] = useState(0,0);
   const [valorActual, setValorActual] = useState('');
   const [flag, setFlag] = useState(false);
+  const [operacionActual, setOperacionActual] = useState('');
 
   function handleClickOperacion(op){
+    
     if(op === "/"){
       setFlag(true);
+      setOperacionActual("/");
       if(numeroInicial === 0){
         setNumeroInicial(parseFloat(valorActual));
       } else {
         setValorActual(numeroInicial / parseFloat(valorActual));
-        setNumeroInicial(parseFloat(valorActual));
+        setNumeroInicial(numeroInicial / parseFloat(valorActual));
       }
       console.log("valor Actual ->" + valorActual);
       console.log("Numero Inicial ->" + numeroInicial);
@@ -45,11 +48,12 @@ function App() {
 
     else if(op === "X"){
       setFlag(true);
+      setOperacionActual("*");
       if(numeroInicial === 0){
         setNumeroInicial(parseFloat(valorActual));
       } else {
         setValorActual(numeroInicial * parseFloat(valorActual));
-        setNumeroInicial(parseFloat(valorActual));
+        setNumeroInicial(parseFloat(valorActual) * numeroInicial);
       }
       console.log("valor Actual ->" + valorActual);
       console.log("Numero Inicial ->" + numeroInicial);
@@ -58,11 +62,12 @@ function App() {
 
     else if(op === "-"){
       setFlag(true);
+      setOperacionActual("-");
       if(numeroInicial === 0){
         setNumeroInicial(parseFloat(valorActual));
       } else {
         setValorActual(numeroInicial - parseFloat(valorActual));
-        setNumeroInicial(parseFloat(valorActual));
+        setNumeroInicial(numeroInicial - parseFloat(valorActual));
       }
       console.log("valor Actual ->" + valorActual);
       console.log("Numero Inicial ->" + numeroInicial);
@@ -71,11 +76,12 @@ function App() {
 
     else if(op === "+"){
       setFlag(true);
+      setOperacionActual("+");
       if(numeroInicial === 0){
         setNumeroInicial(parseFloat(valorActual));
       } else {
         setValorActual(numeroInicial + parseFloat(valorActual));
-        setNumeroInicial(parseFloat(valorActual));
+        setNumeroInicial(parseFloat(valorActual) + numeroInicial);
       }
       console.log("valor Actual ->" + valorActual);
       console.log("Numero Inicial ->" + numeroInicial);
@@ -84,11 +90,12 @@ function App() {
 
     else if(op === "%"){
       setFlag(true);
+      setOperacionActual("%");
       if(numeroInicial === 0){
         setNumeroInicial(parseFloat(valorActual));
       } else {
-        setValorActual(numeroInicial % parseFloat(valorActual));
-        setNumeroInicial(parseFloat(valorActual));
+        setValorActual(parseFloat(valorActual) / 100);
+        //setNumeroInicial(parseFloat(valorActual) / 100);
       }
       console.log("valor Actual ->" + valorActual);
       console.log("Numero Inicial ->" + numeroInicial);
@@ -100,18 +107,37 @@ function App() {
       if(numeroInicial === 0){
         setNumeroInicial(" ");
       } else {
-        setValorActual(" ");
-        setNumeroInicial(" ");
+        setValorActual(0);
+        setNumeroInicial(0);
       }
     }
 
     else if(op === "="){
       setFlag(true);
-      if(numeroInicial === 0){
-        setNumeroInicial(" ");
-      } else {
-        setValorActual(" ");
-        setNumeroInicial(" ");
+      if(operacionActual === "%"){
+        setValorActual(parseFloat(valorActual) / 100);
+        //setNumeroInicial(parseFloat(valorActual) / 100);
+        setOperacionActual(" ");
+      }
+      if(operacionActual === "/"){
+        setValorActual(numeroInicial / parseFloat(valorActual));
+        setNumeroInicial(numeroInicial / parseFloat(valorActual));
+        setOperacionActual(" ");
+      }
+      if(operacionActual === "*"){
+        setValorActual(numeroInicial * parseFloat(valorActual));
+        setNumeroInicial(parseFloat(valorActual) * numeroInicial);
+        setOperacionActual(" ");
+      }
+      if(operacionActual === "-"){
+        setValorActual(numeroInicial - parseFloat(valorActual));
+        setNumeroInicial(numeroInicial - parseFloat(valorActual));
+        setOperacionActual(" ");
+      }
+      if(operacionActual === "+"){
+        setValorActual(numeroInicial + parseFloat(valorActual));
+        setNumeroInicial(parseFloat(valorActual) + numeroInicial);
+        setOperacionActual(" ");
       }
     }
 
@@ -132,16 +158,19 @@ function App() {
     <React.Fragment>
       <CssBaseline />
       <Container fixed className={classes.altura}>
-        <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '100vh' }} >
+        <Typography component="div" style={{ backgroundColor: '#cfe8fc', height: '65vh' }} >
           <div className={classes.root}>
-            <Grid container spacing={3}>
-              <Grid item xs={12}>
+            <Grid container spacing={4}>
+              <Grid item xs={2}></Grid>
+              <Grid item xs={8}>
                 <Paper className={classes.paper}>
                   <form className={classes.root} noValidate autoComplete="off">
                     <TextField value={valorActual} id="outlined-basic" fullWidth label="Ingrese un valor" variant="outlined" />
                   </form>
                 </Paper>
               </Grid>
+              <Grid item xs={2}></Grid>
+              
               <Grid item xs={2}></Grid>
               <Grid item xs={2}>
                 <Paper className={classes.paper}>
@@ -283,7 +312,7 @@ function App() {
               </Grid>
               <Grid item xs={4}>
                 <Paper className={classes.paper}>
-                  <Button onClick={()=>handleClickOperacion("=")} variant="outlined" color="primary">
+                  <Button onClick={()=>handleClickOperacion("=")}  variant="contained" color="primary">
                     =
                   </Button>
                 </Paper>
