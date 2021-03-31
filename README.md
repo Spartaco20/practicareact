@@ -19,37 +19,33 @@ _Dado el caso de querar crear un proyecto desde cero se hace necesario tener en 
 
 _Se procede a instalar el **Node.js** _
 
-```
 ![Node.js setup](public/img/screenshots/node_setup.jpg?raw=true 'Node.js setup')
-```
+
 
 _Una vez instalado, se procede a abrir la consola CMD de Windows_
 
-```
 ![cmd-ventana](public/img/screenshots/cmd-ventana.jpg?raw=true 'cmd-ventana')
-```
+
 
 _Y se procede a ejecutar los siguientes comandos en su respectivo orden_
 
 ```
-**npm install -g npm@latest**
+npm install -g npm@latest
 
-**npm cache clean --force**
+npm cache clean --force
 
-**npm install -g create-react-app**
+npm install -g create-react-app
 ```
 
 _Luego, seleccionamos la ruta donde se creara el nuevo proyecto al utilizar el siguiente comando: **create-react-app + el nombre del proyecto**, damos Enter y procedera a instalarse_
 
-```
 ![cmd-create-react-app](public/img/screenshots/cmd-create-react.jpg?raw=true 'cmd-create-react-app')
-```
+
 
 _Posteriormente, ingresamos a la carpeta del proyecto y se ejecuta el siguiente comando: **npm start**, damos Enter y procedera a inicializarce la aplicación desde el servidor_
 
-```
 ![cmd-npm-start](public/img/screenshots/cmd-npm-start.jpg?raw=true 'cmd-npm-start')
-```
+
 
 _Para finalizar se procede a abrir la carpeta del proyecto desde el editor de código **Visual Studio Code**._
 
