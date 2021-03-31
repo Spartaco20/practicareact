@@ -11,29 +11,47 @@ Mira **Despligue** para conocer como desplegar el proyecto.
 
 ### Pre-requisitos 📋
 
-_Que cosas necesitas para instalar el software y como instalarlas_
+_Si lo que se desea es iniciar un proyecto desde cero tomando como punto de referencia la **Calculadora React** y aun no cuentas con las herramientas necesarias instaladas en tu máquina local te recomendamos mirar el apartado **Construido con**.
+
+### Instalación (opcional) 🔧
+
+_Dado el caso de querar crear un proyecto desde cero se hace necesario tener en cuenta el siguiente paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo funcional y apropiado_
+
+_Se procede a instalar el **Node.js** _
 
 ```
-Da un ejemplo
+![Node.js setup](public/img/screenshots/node_setup.jpg?raw=true 'Node.js setup')
 ```
 
-### Instalación 🔧
-
-_Una serie de ejemplos paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo ejecutandose_
-
-_Dí cómo será ese paso_
+_Una vez instalado, se procede a abrir la consola CMD de Windows_
 
 ```
-Da un ejemplo
+![cmd-ventana](public/img/screenshots/cmd-ventana.jpg?raw=true 'cmd-ventana')
 ```
 
-_Y repite_
+_Y se procede a ejecutar los siguientes comandos en su respectivo orden_
 
 ```
-hasta finalizar
+**npm install -g npm@latest**
+
+**npm cache clean --force**
+
+**npm install -g create-react-app**
 ```
 
-_Finaliza con un ejemplo de cómo obtener datos del sistema o como usarlos para una pequeña demo_
+_Luego, seleccionamos la ruta donde se creara el nuevo proyecto al utilizar el siguiente comando: **create-react-app + el nombre del proyecto**, damos Enter y procedera a instalarse_
+
+```
+![cmd-create-react-app](public/img/screenshots/cmd-create-react.jpg?raw=true 'cmd-create-react-app')
+```
+
+_Posteriormente, ingresamos a la carpeta del proyecto y se ejecuta el siguiente comando: **npm start**, damos Enter y procedera a inicializarce la aplicación desde el servidor_
+
+```
+![cmd-npm-start](public/img/screenshots/cmd-npm-start.jpg?raw=true 'cmd-npm-start')
+```
+
+_Para finalizar se procede a abrir la carpeta del proyecto desde el editor de código **Visual Studio Code**._
 
 ## Despliegue 📦
 
