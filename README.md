@@ -82,7 +82,7 @@ Se uso [GitHub](https://github.com/) para el versionado. Se recomienda crear una
 
 ## Autores ✒️
 
-* **Freddy Alexander Florez** - *Analista, Diseñador y Desarrollador Web* - [Spartaco20](https://github.com/Spartaco20/)
+* **Freddy Alexander Florez Tibata** - *Analista, Diseñador y Desarrollador Web* - [Spartaco20](https://github.com/Spartaco20/)
 
 ## Licencia 📄
 
