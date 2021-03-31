@@ -6,18 +6,18 @@ _El proyecto consiste en el desarrollo de una Calculadora que realiza las operac
 
 _Dando click en el siguiente link: [Calculadora React](https://github.com/Spartaco20/practicareact), tendrás acceso al repositorio en GitHub y te permitirá obtener una copia del proyecto en funcionamiento en tu máquina local para propósitos de desarrollo y pruebas._
 
-Mira **Despligue** para conocer como desplegar el proyecto.
+Mira **Despliegue** para conocer como desplegar el proyecto.
 
 
 ### Pre-requisitos 📋
 
-_Si lo que se desea es iniciar un proyecto desde cero tomando como punto de referencia la **Calculadora React** y aun no cuentas con las herramientas necesarias instaladas en tu máquina local te recomendamos mirar el apartado **Construido con**.
+_Si lo que se desea es iniciar un proyecto desde cero tomando como punto de referencia la **Calculadora React** y aun no cuentas con las herramientas necesarias instaladas en tu máquina local te recomendamos mirar el apartado **Construido con**._
 
 ### Instalación (opcional) 🔧
 
-_Dado el caso de querar crear un proyecto desde cero se hace necesario tener en cuenta el siguiente paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo funcional y apropiado_
+_Dado el caso de querar crear un proyecto desde cero se hace necesario tener en cuenta el siguiente paso a paso que te dice lo que debes ejecutar para tener un entorno de desarrollo funcional y apropiado._
 
-_Se procede a instalar el **Node.js** _
+_Se procede a instalar el **Node.js**_
 
 ![Node.js setup](public/img/screenshots/node_setup.jpg?raw=true 'Node.js setup')
 
