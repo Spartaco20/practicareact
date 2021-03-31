@@ -11,7 +11,7 @@ Mira **Despliegue** para conocer como desplegar el proyecto.
 
 ### Pre-requisitos 📋
 
-_Si lo que se desea es iniciar un proyecto desde cero tomando como punto de referencia la **Calculadora React** y aun no cuentas con las herramientas necesarias instaladas en tu máquina local te recomendamos mirar el apartado **Construido con**._
+_Si lo que desea es iniciar un proyecto desde cero tomando como punto de referencia la **Calculadora React** y aun no cuentas con las herramientas necesarias instaladas en tu máquina local te recomendamos mirar **Construido con**._
 
 ### Instalación (opcional) 🔧
 
